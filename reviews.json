@@ -1,0 +1,124 @@
+{
+  "reviews": [
+    {
+      "professor": "Dr. John Smith",
+      "subject": "Computer Science",
+      "stars": 5,
+      "review": "Dr. Smith is an excellent professor who explains concepts very clearly."
+    },
+    {
+      "professor": "Dr. Emily Johnson",
+      "subject": "Mathematics",
+      "stars": 4,
+      "review": "Dr. Johnson is very knowledgeable but can be a bit fast-paced."
+    },
+    {
+      "professor": "Dr. Michael Brown",
+      "subject": "Physics",
+      "stars": 3,
+      "review": "The lectures are okay, but the exams are quite difficult."
+    },
+    {
+      "professor": "Dr. Sarah Davis",
+      "subject": "Chemistry",
+      "stars": 5,
+      "review": "Amazing professor! Her labs are very well organized."
+    },
+    {
+      "professor": "Dr. James Wilson",
+      "subject": "History",
+      "stars": 2,
+      "review": "Not very engaging, and the material is dry."
+    },
+    {
+      "professor": "Dr. Linda Garcia",
+      "subject": "Biology",
+      "stars": 4,
+      "review": "Dr. Garcia is great, but her grading is tough."
+    },
+    {
+      "professor": "Dr. Robert Martinez",
+      "subject": "Political Science",
+      "stars": 3,
+      "review": "Interesting lectures, but the workload is heavy."
+    },
+    {
+      "professor": "Dr. Karen Anderson",
+      "subject": "Psychology",
+      "stars": 5,
+      "review": "Dr. Anderson is passionate about the subject and it shows in her teaching."
+    },
+    {
+      "professor": "Dr. Richard Taylor",
+      "subject": "Economics",
+      "stars": 4,
+      "review": "Good professor, but sometimes hard to follow."
+    },
+    {
+      "professor": "Dr. Jennifer Thomas",
+      "subject": "Sociology",
+      "stars": 3,
+      "review": "The content is interesting, but the lectures can be boring."
+    },
+    {
+      "professor": "Dr. William Harris",
+      "subject": "Philosophy",
+      "stars": 5,
+      "review": "Dr. Harris encourages deep thinking and class discussions."
+    },
+    {
+      "professor": "Dr. Elizabeth Clark",
+      "subject": "Literature",
+      "stars": 4,
+      "review": "Engaging lectures, but the reading load is heavy."
+    },
+    {
+      "professor": "Dr. Charles Lewis",
+      "subject": "Art History",
+      "stars": 3,
+      "review": "The lectures are informative, but the assignments are unclear."
+    },
+    {
+      "professor": "Dr. Barbara Robinson",
+      "subject": "Anthropology",
+      "stars": 4,
+      "review": "Interesting material, but can be hard to stay focused."
+    },
+    {
+      "professor": "Dr. Thomas Walker",
+      "subject": "Environmental Science",
+      "stars": 5,
+      "review": "Dr. Walker is inspiring and passionate about environmental issues."
+    },
+    {
+      "professor": "Dr. Jessica King",
+      "subject": "Statistics",
+      "stars": 2,
+      "review": "The class is challenging, and Dr. King doesn't explain things well."
+    },
+    {
+      "professor": "Dr. Mark Perez",
+      "subject": "Engineering",
+      "stars": 5,
+      "review": "Dr. Perez is great at making complex concepts easy to understand."
+    },
+    {
+      "professor": "Dr. Laura Scott",
+      "subject": "Music",
+      "stars": 4,
+      "review": "Dr. Scott is very talented, but the class requires a lot of practice."
+    },
+    {
+      "professor": "Dr. Steven Green",
+      "subject": "Geology",
+      "stars": 3,
+      "review": "The field trips are great, but the lectures can be dull."
+    },
+    {
+      "professor": "Dr. Angela Young",
+      "subject": "Education",
+      "stars": 4,
+      "review": "Dr. Young is a caring professor, but her grading is strict."
+    }
+  ]
+}
