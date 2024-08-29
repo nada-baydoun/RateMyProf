@@ -16,10 +16,64 @@ Your task is to:
 4. Offer a recommendation on which professor(s) might be the best fit, explaining your reasoning.
 5. If applicable, suggest follow-up questions the student might want to consider.
 
+Strict Formatting Rules:
+- Do not use any special formatting (no bold, italics, asterisks, bullet points, or other markup).
+- Use proper grammar, punctuation, and spelling in your responses.
+- Follow this exact template for each professor, including all line breaks (represented by \\n):
+
+Professor Name:\\n
+\\n
+Key point 1\\n
+\\n
+Key point 2\\n
+\\n
+Key point 3\\n
+\\n
+\\n
+
+- Ensure there is an empty line between each key point and two empty lines between professors.
+- Do not number or use bullet points for the key points.
+- After discussing all professors, provide your recommendation and reasoning.
+- For follow-up questions, use this exact format, including line breaks:
+
+1) Question 1\\n
+\\n
+2) Question 2\\n
+\\n
+3) Question 3
+
+Example of correct formatting:
+
+Professor John Doe:\\n
+\\n
+Extremely helpful and willing to teach students through labs\\n
+\\n
+Explains necessary concepts clearly to complete assignments\\n
+\\n
+Known for being patient and approachable during office hours\\n
+\\n
+\\n
+Professor Jane Smith:\\n
+\\n
+Dedicated to teaching and loves the subject matter\\n
+\\n
+Makes readings relatable and listens to student perspectives\\n
+\\n
+Encourages critical thinking and class discussions\\n
+\\n
+\\n
+Based on your needs, Professor John Doe might be a better fit due to his hands-on approach in labs and clear explanations. However, if you prefer a more discussion-based environment, Professor Jane Smith could be an excellent choice.\\n
+\\n
+1) What specific topics within the subject are you most interested in?\\n
+\\n
+2) Do you prefer a more lecture-based or discussion-based classroom environment?\\n
+\\n
+3) How important is having a professor who is readily available outside of class time?
+
 Remember to:
 - Be objective and balanced in your assessments.
 - Highlight both positive and constructive feedback for each professor.
-- Consider factors like teaching style, course difficulty, and overall student satisfaction.
+- Consider factors like course difficulty, and overall student satisfaction.
 - Avoid making definitive statements about a professor's character or abilities; instead, focus on the trends in student feedback.
 - If the query doesn't provide enough information for a solid recommendation, ask for clarification.
 
@@ -32,7 +86,7 @@ export async function POST(req) {
 
     // Initialize Pinecone and Google Generative AI
     const pc = new Pinecone({
-      apiKey: process.env.PINECONE_API_KEY,
+      apiKey: "b06218ed-b4ea-48db-a318-6e6870d7edd0",
     });
     const index = pc.index("rag").namespace("ns1");
 
@@ -58,15 +112,13 @@ export async function POST(req) {
       vector: embedding.values,
     });
 
-    let resultString = "";
-    results.matches.forEach((match) => {
-      resultString += `
-      Returned Results:
-      Professor: ${match.id}
-      Review: ${match.metadata.review}
-      Subject: ${match.metadata.subject}
-      Stars: ${match.metadata.stars}
-      \n\n`;
+    let resultString = "Here are the top professors based on your query:\n\n";
+    results.matches.forEach((match, index) => {
+      resultString += `Professor ${match.metadata.first_name} ${match.metadata.last_name}:\n`;
+      resultString += `\nRating: ${match.metadata.stars || "Not rated"}\n`;
+      resultString += `\nReview: ${match.metadata.review || "No review provided"}\n`;
+      resultString += `\nSubject: ${match.metadata.subject || "Not specified"}\n`;
+      resultString += `\n`;
     });
 
     const lastMessage = data[data.length - 1];
